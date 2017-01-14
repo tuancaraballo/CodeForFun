@@ -1,0 +1,27 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scanner = new Scanner(System.in);
+        String myString = scanner.next();
+        int subStringLength = scanner.nextInt();
+        
+        int lengthOfInput = myString.length();
+        int lastIndex = lengthOfInput - subStringLength;
+        
+        SortedSet <String> sets = new TreeSet<String>();
+        
+        for(int i = 0; i <= lastIndex; i++){
+            temp = myString.substring(i, i + subStringLength);
+            sets.add(temp);
+             
+        }
+        System.out.println(sets.first());
+        System.out.println(sets.last());
+       
+        //System.out.println(lastIndex);
+    }
+}
