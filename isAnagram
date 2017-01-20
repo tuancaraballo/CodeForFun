@@ -1,0 +1,31 @@
+static boolean isAnagram(String a, String b) {
+        
+        // Complete the function by writing your code here.
+        int lengthStringA = a.length();
+        a = a.toLowerCase();
+        b = b.toLowerCase();
+        /*
+            char A[] = a.toLowerCase().toCharArray();
+            char B[] = b.toLowerCase().toCharArray();
+            
+            Arrays.sort(A);
+            Arrays.sort(B);
+            
+            return Arrays.equals(A,B);
+        */
+        //System.out.println(a +" " +b);
+        int totalAsciiValueA = 0;
+        int lengthStringB = b.length();
+        int totalAsciiValueB = 0;
+        
+        for(int i = 0; i < lengthStringA; i++){
+            totalAsciiValueA += (int) a.charAt(i);
+        }
+         for(int j = 0; j < lengthStringB; j++){
+            totalAsciiValueB += (int) b.charAt(j);
+        }
+        if(totalAsciiValueA == totalAsciiValueB)
+            return true;
+        else
+            return false;
+    }
