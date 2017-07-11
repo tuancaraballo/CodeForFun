@@ -1,5 +1,5 @@
 static boolean isAnagram(String a, String b) {
-        
+// Q welta menor, aqui los grandes dandole tutoriales a los menores jeje        
         // Complete the function by writing your code here.
         int lengthStringA = a.length();
         a = a.toLowerCase();
